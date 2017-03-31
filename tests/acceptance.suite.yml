@@ -14,17 +14,16 @@ modules:
     config:
             WebDriver:
                 url: 'http://localhost:8000'
-                browser: 'phantomjs'
-                # browser: 'chrome'
+                browser: 'firefox'
                 wait: 1 #seconds
 
 # http://codeception.com/docs/07-AdvancedUsage
-env:
-    phantom:
-         modules:
-            config:
-                WebDriver:
-                    browser: 'phantomjs'
+#env:
+#    phantom:
+#         modules:
+#            config:
+#                WebDriver:
+#                    browser: 'phantomjs'
 
  #   chrome:
  #        modules:
