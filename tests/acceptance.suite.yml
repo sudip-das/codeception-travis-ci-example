@@ -14,7 +14,7 @@ modules:
     config:
             WebDriver:
                 url: 'http://localhost:8000'
-                browser: 'phantomjs'
+                browser: 'firefox'
                 wait: 1 #seconds
 
 # http://codeception.com/docs/07-AdvancedUsage
