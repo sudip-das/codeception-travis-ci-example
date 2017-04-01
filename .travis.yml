@@ -17,12 +17,12 @@ git:
 # Define the php versions against we want to test our code
 php:
     - 5.6
-    - 7.0
+    #- 7.0
 
 matrix:
   fast_finish: true
-  allow_failures:
-    - php: 7.0
+  #allow_failures:
+    #- php: 7.0
 
 
 # We don't want to run linux commands as super user
@@ -42,7 +42,7 @@ before_script:
   - "sh -e /etc/init.d/xvfb start"
   - sleep 3 # give xvfb some time to start
   - echo "Download selenium-server-standalone jar file"
-  - wget -c -nc --retry-connrefused --tries=0 http://goo.gl/EoH85x -O selenium-server-standalone.jar
+  - wget -c -nc --retry-connrefused --tries=0 http://selenium-release.storage.googleapis.com/2.53/selenium-server-standalone-2.53.1.jar -O selenium-server-standalone.jar
   - echo "Run selenium server - background process"
   - nohup bash -c "java -jar selenium-server-standalone.jar &" && sleep 1; cat nohup.out
   - echo "Run php in-built server - background process"
